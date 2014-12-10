@@ -1,0 +1,25 @@
+body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:20px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+.listView {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #F3D3D3;
+}
+
+.contenidoFila {
+    height: 50px;
+    background: #FFFFFF;
+    padding-left: 10px;
+}
+
+.imagenNext {
+    float: right; 
+    margin-right: 10px;    
+}

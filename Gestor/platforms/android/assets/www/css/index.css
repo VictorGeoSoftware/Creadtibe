@@ -7,10 +7,18 @@ body {
     width:100%;
 }
 
-logo {
-    position: absolute;
+.logo {
+    position: fixed;
+    z-index: 2000;
     margin-left: 25px;
     margin-top: 25px;
+}
+
+.imagen {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 300px;
 }
 
 h1 {
@@ -23,6 +31,7 @@ h1 {
 }
 
 .listView {
+    padding-top: 310px;
     margin-left: 10px;
     margin-right: 10px;
     background: #F3D3D3;
@@ -40,8 +49,8 @@ h1 {
 }
 
 .configuracion {
-    position: absolute; 
-    left: 50%; 
-    transform: translate(-50%); 
-    margin-bottom: 10px;
+    position: fixed;
+    z-index: 1000;
+    background: #FFFFFF;
+    left: 50%
 }

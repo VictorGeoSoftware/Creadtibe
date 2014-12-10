@@ -1,3 +1,10 @@
+// Variables globales
+var splashLanzado = "false";
+var configuracion_opciones;
+
+
+
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -15,8 +22,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        navigator.splashscreen.show();
-        getJsonData();
+        console.log("Splash lanzado? " + splashLanzado);
+        if(splashLanzado == "false"){
+            navigator.splashscreen.show();
+            splashLanzado = "true";
+            getJsonData();
+        }
     }
 };
 
@@ -29,7 +40,9 @@ function getJsonData(){
                               {"nombre": "Categoría desde json 2", "subcategoria": [
                                   {"nombre": "Subcategoria 1"},
                                   {"nombre": "Subcategoria 2"}]},
-                              {"nombre": "Categoría desde json 3", "subcategoria": ""}], 
+                              {"nombre": "Categoría desde json 3", "subcategoria": ""},
+                             {"nombre": "Categoría Pepote", "subcategoria": ""},
+                             {"nombre": "Categoría Victor", "subcategoria": ""}], 
                 "configuracion":[{"nombre": "Opción 1", "subcategoria": ""},
                                  {"nombre": "", "subcategoria": [
                                     {"nombre": "Opción 2"},
@@ -37,7 +50,7 @@ function getJsonData(){
                                  {"nombre": "Opción 4", "subcategoria": ""}]
                };
     
-    console.log('Simulacro de petición JSON');
+    // Se tratan las categorías
     var categorias = json['categorias'];
     var i = 0;
     
@@ -53,7 +66,7 @@ function getJsonData(){
             }
         }
         
-        //Añadimos filas
+        //Añadimos filas de ListView en página principal
         var div = document.createElement("DIV");
         var p = document.createElement("P");
         var t = document.createTextNode(categoria['nombre']);
@@ -66,6 +79,25 @@ function getJsonData(){
         p.appendChild(imageNext);
         div.appendChild(p).className = "contenidoFila";
         document.getElementById("lista").appendChild(div);
+    }
+    
+    // Se tratan las opciones de configuración
+    configuracion_opciones = new Array(json['configuracion'].length);
+    var opciones = json['configuracion'];
+    
+    for(var i = 0; i < opciones.length; i++){
+        var opcion = opciones[i];
+        configuracion_opciones[i] = opcion['nombre'];
+        
+        if(opcion['subcategoria'].length > 0){
+            var opcion_subcategorias = opcion['subcategoria'];
+            configuracion_opciones[i] = new Array(opcion_subcategorias.length);
+            
+            for(var j = 0; j < opcion_subcategorias.length; j++){
+                var subcategoria_nombre = opcion_subcategorias[j];
+                configuracion_opciones[i][j] = subcategoria_nombre['nombre'];
+            }
+        }
     }
     
     /*
@@ -91,4 +123,34 @@ function getJsonData(){
         }
     });
     */
+}
+
+function cargarPaginaOpciones() {
+    window.open("opciones.html", "_blank", "location=yes");
+    
+    for(var i = 0; i < configuracion_opciones.length; i++){
+        //Evaluamos si son sbcategorías o categoría sola
+        console.log('Valores array segundo indice: ' + configuracion_opciones[i][0]);
+        
+        if(configuracion_opciones[i][0] == 0){
+            //Añadimos filas de ListView en página principal
+            var div = document.createElement("DIV");
+            var p = document.createElement("P");
+            var t = document.createTextNode(configuracion_opciones[i]);
+
+            var imageNext = document.createElement("IMG");
+            imageNext.src = "img/next.png";
+            imageNext.className = "imagenNext"
+
+            p.appendChild(t);
+            p.appendChild(imageNext);
+            div.appendChild(p).className = "contenidoFila";
+            document.getElementById("lista_opciones").appendChild(div);            
+        }else{
+            
+        }
+        
+        
+
+    }
 }
