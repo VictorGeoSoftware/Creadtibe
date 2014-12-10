@@ -1,5 +1,4 @@
 body {
-    background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:20px;
     height:100%;
@@ -23,4 +22,20 @@ h1 {
     text-align:center;
 }
 
+.listView {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #F3D3D3;
+}
 
+.contenidoFila {
+    height: 50px;
+    background: #FFFFFF;
+}
+
+.configuracion {
+    position: absolute; 
+    left: 50%; 
+    transform: translate(-50%); 
+    margin-bottom: 10px;
+}
