@@ -16,19 +16,79 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         navigator.splashscreen.show();
-        //app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+        getJsonData();
     }
 };
 
 app.initialize();
+
+function getJsonData(){
+    //Se harcodea JSON, hasta que haya uno para leer
+    var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg", 
+                "categorias":[{"nombre": "Categoría desde json 1", "subcategoria": ""},
+                              {"nombre": "Categoría desde json 2", "subcategoria": [
+                                  {"nombre": "Subcategoria 1"},
+                                  {"nombre": "Subcategoria 2"}]},
+                              {"nombre": "Categoría desde json 3", "subcategoria": ""}], 
+                "configuracion":[{"nombre": "Opción 1", "subcategoria": ""},
+                                 {"nombre": "", "subcategoria": [
+                                    {"nombre": "Opción 2"},
+                                    {"nombre": "Opción 3"}]},
+                                 {"nombre": "Opción 4", "subcategoria": ""}]
+               };
+    
+    console.log('Simulacro de petición JSON');
+    var categorias = json['categorias'];
+    var i = 0;
+    
+    for(i = 0; i < categorias.length; i++){
+        var categoria = categorias[i];
+        
+        if(categoria['subcategoria'].length > 0){
+            var subCategorias = categoria['subcategoria'];
+            var j = 0;
+            for(j = 0; j < subCategorias.length; j++){
+                var subCategoria = subCategorias[j];
+                
+            }
+        }
+        
+        //Añadimos filas
+        var div = document.createElement("DIV");
+        var p = document.createElement("P");
+        var t = document.createTextNode(categoria['nombre']);
+        
+        var imageNext = document.createElement("IMG");
+        imageNext.src = "img/next.png";
+        imageNext.className = "imagenNext"
+        
+        p.appendChild(t);
+        p.appendChild(imageNext);
+        div.appendChild(p).className = "contenidoFila";
+        document.getElementById("lista").appendChild(div);
+    }
+    
+    /*
+    $.ajax({
+        url: 'https://api.themoviedb.org/3/discover/movie?&api_key=8ef4fa6a00af69b09d14335cc80e1f15',
+        type: "GET",
+        dataType: "json",
+        success: function(data, status){
+            console.log('Peticion realizada');
+        },
+        error: function(request, status, error){
+            console.log('Error en petición: ' + status);
+        }
+    }).done(function(data){
+        console.log('En Done');
+        console.log('Numer de datos: ' + data['results'].length);
+        
+        var i = 0;
+        var lista = data['results'];
+        for(i = 0; i < data['results'].length; i++){
+            var pelicula = lista[i];
+            console.log('Pelicula: ' + pelicula['original_title']);
+        }
+    });
+    */
+}

@@ -31,6 +31,12 @@ h1 {
 .contenidoFila {
     height: 50px;
     background: #FFFFFF;
+    padding-left: 10px;
+}
+
+.imagenNext {
+    float: right; 
+    margin-right: 10px;    
 }
 
 .configuracion {
