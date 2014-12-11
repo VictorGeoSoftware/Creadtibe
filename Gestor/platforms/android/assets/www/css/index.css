@@ -49,7 +49,6 @@ h1 {
 }
 
 .configuracion {
-    position: fixed;
     z-index: 1000;
     background: #FFFFFF;
     left: 50%
