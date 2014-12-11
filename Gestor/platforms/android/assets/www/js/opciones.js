@@ -33,7 +33,6 @@ function getJsonData(){
                 var reader = new FileReader();
                 reader.onloadend = function(evt){
                     json = JSON.parse(reader.result);
-                    console.log('CADENA JSON: ' + json);
                     cargarOpciones();
                 }
                 
@@ -84,17 +83,57 @@ function cargarOpciones(){
             var opcion_subcategorias = opcion['subcategoria'];
             configuracion_opciones[i] = new Array(opcion_subcategorias.length);
             
+            
+
             for(var j = 0; j < opcion_subcategorias.length; j++){
                 var subcategoria_nombre = opcion_subcategorias[j];
                 configuracion_opciones[i][j] = subcategoria_nombre['nombre'];
+            
+                var li = document.createElement("LI");
+                var ahref = document.createElement("A");
+                var div = document.createElement("DIV");
+                var p = document.createElement("P");                
+                var t = document.createTextNode(configuracion_opciones[i][j]);
+                
+                p.appendChild(t).className = "ca-main";
+                div.appendChild(p).className = "ca-content";
+                ahref.appendChild(div);
+                ahref.href = "opciones.html"; //cambiarlo por el que se recoja del json
+                li.appendChild(ahref);
+                
+                if(j < opcion_subcategorias.length - 1){
+                    li.style.marginBottom = "0px";
+                }
+
+                document.getElementById("lista").appendChild(li);
             }
+            
+            
+            
+        }else{
+            pintarOpciones(configuracion_opciones[i]);
         }
     }
-    
-    pintarOpciones();
 }
 
-function pintarOpciones() {
+function pintarOpciones(texto) {
+    var li = document.createElement("LI");
+    var ahref = document.createElement("A");
+    var div = document.createElement("DIV");
+    var p = document.createElement("P");
+    var t = document.createTextNode(texto);
+
+    p.appendChild(t).className = "ca-main";
+    div.appendChild(p).className = "ca-content";
+    ahref.appendChild(div);
+    ahref.href = "opciones.html"; //cambiarlo por el que se recoja del json
+    li.appendChild(ahref);
+    document.getElementById("lista").appendChild(li);
+}
+
+
+
+/*function pintarOpciones() {
     for(var i = 0; i < configuracion_opciones.length; i++){
         //Evaluamos si son sbcategorías o categoría sola
         var valorSubcategoria = configuracion_opciones[i][0];
@@ -106,25 +145,19 @@ function pintarOpciones() {
             console.log('Pasa por opciones agrupadas');
         }
         
-        console.log('Ponemos filas de opción nuevas');
         //Añadimos filas de ListView en página principal
+        var li = document.createElement("LI");
+        var ahref = document.createElement("A");
         var div = document.createElement("DIV");
         var p = document.createElement("P");
         var t = document.createTextNode(configuracion_opciones[i]);
-
-
-        var imageNext = document.createElement("IMG");
-        imageNext.src = "img/next.png";
-        imageNext.className = "imagenNext"
-
-        p.appendChild(t);
-        console.log('Ponemos texto');
-        p.appendChild(imageNext);
-        console.log('Ponemos parrafo');
-        div.appendChild(p).className = "contenidoFila";
-        console.log('Ponemos <div>');
-        document.getElementById("lista_opciones").appendChild(div);
-        console.log('Ponemos dentro de listview');
+        
+        p.appendChild(t).className = "ca-main";
+        div.appendChild(p).className = "ca-content";
+        ahref.appendChild(div);
+        ahref.href = "opciones.html";
+        li.appendChild(ahref);
+        document.getElementById("lista").appendChild(li);
 
     }
-}
+}*/

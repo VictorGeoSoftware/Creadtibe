@@ -12,8 +12,9 @@ var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg",
                          {"nombre": "Categoría Victor", "subcategoria": ""}], 
             "configuracion":[{"nombre": "Opción 1", "subcategoria": ""},
                              {"nombre": "", "subcategoria": [
-                                {"nombre": "Opción 2"},
-                                {"nombre": "Opción 3"}]},
+                                {"nombre": "SubOpción 2"},
+                                {"nombre": "SubOpción 3"},
+                                {"nombre": "SubOpción 4"}]},
                              {"nombre": "Opción 4", "subcategoria": ""},
                              {"nombre": "Opción 5 desde JSON", "subcategoria": ""}]
            };
@@ -121,18 +122,18 @@ function getJsonData(){
         }
         
         //Añadimos filas de ListView en página principal
+        var li = document.createElement("LI");
+        var ahref = document.createElement("A");
         var div = document.createElement("DIV");
         var p = document.createElement("P");
         var t = document.createTextNode(categoria['nombre']);
         
-        var imageNext = document.createElement("IMG");
-        imageNext.src = "img/next.png";
-        imageNext.className = "imagenNext"
-        
-        p.appendChild(t);
-        p.appendChild(imageNext);
-        div.appendChild(p).className = "contenidoFila";
-        document.getElementById("lista").appendChild(div);
+        p.appendChild(t).className = "ca-main";
+        div.appendChild(p).className = "ca-content";
+        ahref.appendChild(div);
+        ahref.href = "opciones.html";
+        li.appendChild(ahref);
+        document.getElementById("lista").appendChild(li);
     }    
 }
 
