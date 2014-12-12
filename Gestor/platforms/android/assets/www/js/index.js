@@ -57,11 +57,14 @@ var app = {
                 fe.file(function(f){
                     var reader = new FileReader();
                     reader.onloadend = function(evt){
+                        
                         if(evt.target.result == null){
                             console.log('NO Existe el fichero');
+                            alert('NO Existe el fichero ' + reader.result);
                             navigator.splashscreen.show();
                         }else{
                             console.log('SI Existe el fichero');
+                            alert('SI Existe el fichero ' + reader.result);
                         }
                     }
                     reader.readAsText(f);
@@ -159,18 +162,20 @@ function gotFileWriter(writer) {
     writer.onwrite = function(evt) {
         console.log("Fichero creado correctamente");
     };
-
-    writer.write(json);
+    
+    //writer.write(json);
+    writer.write(JSON.stringify(json));
     writer.abort();
 }
 
 function success(parent){
     console.log("Directorio creado: " + parent.name)
+    alert('Fichero creado success');
 }
 
 function fail(error) {
     console.log("error en txt o directorio: " + error.code);
-    console.dir(error)
+    alert('Error en Fichero');
 }
 
 function cargarPaginaOpciones() {

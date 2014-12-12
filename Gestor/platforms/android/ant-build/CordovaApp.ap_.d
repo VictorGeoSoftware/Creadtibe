@@ -46,6 +46,7 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/index.css \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/opciones.css \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/subcategorias.css \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/back.png \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/data_configuration.png \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/icon.png \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/image_index.jpg \

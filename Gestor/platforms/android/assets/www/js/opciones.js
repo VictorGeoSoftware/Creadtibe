@@ -126,33 +126,6 @@ function pintarOpciones(texto, enlace) {
     document.getElementById("lista").appendChild(li);
 }
 
-
-
-/*function pintarOpciones() {
-    for(var i = 0; i < configuracion_opciones.length; i++){
-        //Evaluamos si son sbcategorías o categoría sola
-        var valorSubcategoria = configuracion_opciones[i][0];
-        console.log('Valor subcategoria: ' + valorSubcategoria);
-        
-        if(valorSubcategoria == '0'){
-            console.log('Pasa por opcion principal');
-        }else{
-            console.log('Pasa por opciones agrupadas');
-        }
-        
-        //Añadimos filas de ListView en página principal
-        var li = document.createElement("LI");
-        var ahref = document.createElement("A");
-        var div = document.createElement("DIV");
-        var p = document.createElement("P");
-        var t = document.createTextNode(configuracion_opciones[i]);
-        
-        p.appendChild(t).className = "ca-main";
-        div.appendChild(p).className = "ca-content";
-        ahref.appendChild(div);
-        ahref.href = "opciones.html";
-        li.appendChild(ahref);
-        document.getElementById("lista").appendChild(li);
-
-    }
-}*/
+function cerrar(){
+    history.go(-1);
+}

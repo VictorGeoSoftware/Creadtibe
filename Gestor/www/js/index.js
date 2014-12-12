@@ -57,6 +57,7 @@ var app = {
                 fe.file(function(f){
                     var reader = new FileReader();
                     reader.onloadend = function(evt){
+                        
                         if(evt.target.result == null){
                             console.log('NO Existe el fichero');
                             navigator.splashscreen.show();
@@ -130,10 +131,6 @@ function getJsonData(){
         if(categoria['subcategoria'].length > 0){
             var subCategorias = categoria['subcategoria'];
             ahref.href = "subcategorias.html?valor=" + i;
-            
-            /*for(var j = 0; j < subCategorias.length; j++){
-                var subCategoria = subCategorias[j];
-            }*/
         }else{
             ahref.href = categoria['enlace'];
         }
@@ -159,8 +156,9 @@ function gotFileWriter(writer) {
     writer.onwrite = function(evt) {
         console.log("Fichero creado correctamente");
     };
-
-    writer.write(json);
+    
+    //writer.write(json);  Cuidao!! Así en iOS no vaaaa
+    writer.write(JSON.stringify(json));
     writer.abort();
 }
 
@@ -170,7 +168,6 @@ function success(parent){
 
 function fail(error) {
     console.log("error en txt o directorio: " + error.code);
-    console.dir(error)
 }
 
 function cargarPaginaOpciones() {

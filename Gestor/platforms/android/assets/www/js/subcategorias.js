@@ -72,3 +72,7 @@ function pintarOpciones(texto, enlace) {
     li.appendChild(ahref);
     document.getElementById("lista").appendChild(li);
 }
+
+function cerrar(){
+    history.go(-1);
+}
