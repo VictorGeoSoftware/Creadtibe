@@ -3,20 +3,23 @@ var configuracion_opciones;
 
 //Se harcodea JSON, hasta que haya uno para leer
 var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg", 
-            "categorias":[{"nombre": "Categoría desde json 1", "subcategoria": ""},
-                          {"nombre": "Categoría desde json 2", "subcategoria": [
-                              {"nombre": "Subcategoria 1"},
-                              {"nombre": "Subcategoria 2"}]},
-                          {"nombre": "Categoría desde json 3", "subcategoria": ""},
-                         {"nombre": "Categoría Pepote", "subcategoria": ""},
-                         {"nombre": "Categoría Victor", "subcategoria": ""}], 
-            "configuracion":[{"nombre": "Opción 1", "subcategoria": ""},
+            "categorias":[{"nombre": "Cuidado de pacientes", "subcategoria": "", "enlace": "http://www.mayoclinic.org"},
+                          {"nombre": "Instalaciones", "subcategoria": [
+                              {"nombre": "Doctores y equipo médico", "enlace": "http://www.mayoclinic.org/appointments/find-a-doctor"},
+                              {"nombre": "Instalaciones y departamentos", "enlace": "http://www.mayoclinic.org/departments-centers/index"}
+                            ], "enlace": ""},
+                          {"nombre": "Opciones académicas", "subcategoria": "", "enlace": "http://www.mayo.edu/education/?_ga=1.224352156.667299883.1416995256"},
+                          {"nombre": "Para profesionales de la medicina", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/medical-professionals"},
+                          {"nombre": "Productos y servicios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"}
+                         ], 
+            "configuracion":[{"nombre": "Terminos y condiciones", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/about-this-site/terms-conditions-use-policy"},
                              {"nombre": "", "subcategoria": [
-                                {"nombre": "SubOpción 2"},
-                                {"nombre": "SubOpción 3"},
-                                {"nombre": "SubOpción 4"}]},
-                             {"nombre": "Opción 4", "subcategoria": ""},
-                             {"nombre": "Opción 5 desde JSON", "subcategoria": ""}]
+                                {"nombre": "Política de privacidad",  "enlace": "http://www.mayoclinic.org/about-this-site/privacy-policy"},
+                                {"nombre": "Aviso de política de privacidad",  "enlace": "http://www.mayoclinic.org/about-mayo-clinic/notice-of-privacy-practices"},
+                                {"nombre": "Detalles de LOPD",  "enlace": "http://www.mayoclinic.org/about-mayo-clinic/notice-of-privacy-practices"}
+                             ]},
+                             {"nombre": "Promociones y patrocinios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/about-this-site/advertising-sponsorship-policy"}
+                            ]
            };
 
 
@@ -113,14 +116,6 @@ function getJsonData(){
     for(var i = 0; i < categorias.length; i++){
         var categoria = categorias[i];
         
-        if(categoria['subcategoria'].length > 0){
-            var subCategorias = categoria['subcategoria'];
-            
-            for(var j = 0; j < subCategorias.length; j++){
-                var subCategoria = subCategorias[j];
-            }
-        }
-        
         //Añadimos filas de ListView en página principal
         var li = document.createElement("LI");
         var ahref = document.createElement("A");
@@ -131,7 +126,18 @@ function getJsonData(){
         p.appendChild(t).className = "ca-main";
         div.appendChild(p).className = "ca-content";
         ahref.appendChild(div);
-        ahref.href = "opciones.html";
+        
+        if(categoria['subcategoria'].length > 0){
+            var subCategorias = categoria['subcategoria'];
+            ahref.href = "subcategorias.html?valor=" + i;
+            
+            /*for(var j = 0; j < subCategorias.length; j++){
+                var subCategoria = subCategorias[j];
+            }*/
+        }else{
+            ahref.href = categoria['enlace'];
+        }
+        
         li.appendChild(ahref);
         document.getElementById("lista").appendChild(li);
     }    
@@ -169,5 +175,9 @@ function fail(error) {
 
 function cargarPaginaOpciones() {
 //    window.location = ("opciones.html");
-    window.open("opciones.html", "_parent");
+    window.open("opciones.html", "_blank",  "location=yes");
+}
+
+function cargarPaginaSubcategoria(valor){
+    window.open("subcategorias.html?var1="+valor, "_blank", "location=yes");
 }

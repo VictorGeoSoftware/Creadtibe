@@ -82,8 +82,6 @@ function cargarOpciones(){
         if(opcion['subcategoria'].length > 0){
             var opcion_subcategorias = opcion['subcategoria'];
             configuracion_opciones[i] = new Array(opcion_subcategorias.length);
-            
-            
 
             for(var j = 0; j < opcion_subcategorias.length; j++){
                 var subcategoria_nombre = opcion_subcategorias[j];
@@ -98,7 +96,7 @@ function cargarOpciones(){
                 p.appendChild(t).className = "ca-main";
                 div.appendChild(p).className = "ca-content";
                 ahref.appendChild(div);
-                ahref.href = "opciones.html"; //cambiarlo por el que se recoja del json
+                ahref.href = subcategoria_nombre['enlace'];
                 li.appendChild(ahref);
                 
                 if(j < opcion_subcategorias.length - 1){
@@ -107,16 +105,13 @@ function cargarOpciones(){
 
                 document.getElementById("lista").appendChild(li);
             }
-            
-            
-            
         }else{
-            pintarOpciones(configuracion_opciones[i]);
+            pintarOpciones(configuracion_opciones[i], opcion['enlace']);
         }
     }
 }
 
-function pintarOpciones(texto) {
+function pintarOpciones(texto, enlace) {
     var li = document.createElement("LI");
     var ahref = document.createElement("A");
     var div = document.createElement("DIV");
@@ -126,7 +121,7 @@ function pintarOpciones(texto) {
     p.appendChild(t).className = "ca-main";
     div.appendChild(p).className = "ca-content";
     ahref.appendChild(div);
-    ahref.href = "opciones.html"; //cambiarlo por el que se recoja del json
+    ahref.href = enlace;
     li.appendChild(ahref);
     document.getElementById("lista").appendChild(li);
 }
