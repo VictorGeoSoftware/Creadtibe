@@ -45,6 +45,7 @@ function getJsonData(){
     });
 }
 
+
 function cargarOpciones(json){
     // Se tratan las opciones de configuración
     var opcion_recibida = getSubcategoria();
@@ -54,7 +55,7 @@ function cargarOpciones(json){
     
     for(var i = 0; i < subcategorias.length; i++){
         var nombre = subcategorias[i];
-        pintarOpciones(nombre['nombre'], nombre['enlace'])
+        pintarOpciones(nombre['nombre'], nombre['enlace']);
     }
 }
 
@@ -64,15 +65,12 @@ function pintarOpciones(texto, enlace) {
     var div = document.createElement("DIV");
     var p = document.createElement("P");
     var t = document.createTextNode(texto);
-
+    
     p.appendChild(t).className = "ca-main";
     div.appendChild(p).className = "ca-content";
     ahref.appendChild(div);
-    ahref.href = enlace;
     li.appendChild(ahref);
+    li.onclick = function () { window.open("navegador.html?var=" + enlace); };
     document.getElementById("lista").appendChild(li);
 }
 
-function cerrar(){
-    history.go(-1);
-}

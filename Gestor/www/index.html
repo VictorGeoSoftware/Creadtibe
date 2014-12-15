@@ -6,14 +6,13 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Gestor de contenidos</title>
     </head>
     <body>
         <!-- Aqui va la imagen de presentación -->
-        <div>
-            <img src="img/icon.png" width="100px" class="logo">
-            <img src="img/image_index.jpg" class="imagen">
-        </div>
+        
+        <img src="img/icon.png" class="logo" height="100px">
+        <img src="img/image_index.jpg" class="imagen">
         
         <!-- Aqui va el listado -->
         <ul class="ca-menu" id="lista">
@@ -26,13 +25,32 @@
             </li>
         </ul>
         
-        <!-- Aqui va el botón de configuración -->
-        <div  class="configuracion">
-            <p onclick="cargarPaginaOpciones()">
-                <img src="img/data_configuration.png" style="margin-right: 10px;">
-                Configuración
-            </p>
-        </div>
+        <!-- Aqui va el barra de menú inferior -->
+        <ul id="menu_inferior" class="ca-inferior">
+            <li style="width: 23%">
+                <a href="javascript:history.go(-1)">
+                    <span class="ca-icon"><img src="img/back.png"></span>
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Atrás</h2>
+                    </div>
+                </a>
+            </li>
+            <li style="width: 50%">
+                <a href="opciones.html">
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Configuración</h2>
+                    </div>
+                </a>
+            </li>
+            <li style="width: 23%">
+                <a href="javascript:history.go(1)">
+                    <span class="ca-icon"><img src="img/next.png"></span>
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Adelante</h2>
+                    </div>
+                </a>
+            </li>
+        </ul>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

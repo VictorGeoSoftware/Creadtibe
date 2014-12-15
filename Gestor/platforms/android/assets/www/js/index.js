@@ -60,11 +60,9 @@ var app = {
                         
                         if(evt.target.result == null){
                             console.log('NO Existe el fichero');
-                            alert('NO Existe el fichero ' + reader.result);
                             navigator.splashscreen.show();
                         }else{
                             console.log('SI Existe el fichero');
-                            alert('SI Existe el fichero ' + reader.result);
                         }
                     }
                     reader.readAsText(f);
@@ -120,7 +118,7 @@ function getJsonData(){
         var categoria = categorias[i];
         
         //Añadimos filas de ListView en página principal
-        var li = document.createElement("LI");
+/*        var li = document.createElement("LI");
         var ahref = document.createElement("A");
         var div = document.createElement("DIV");
         var p = document.createElement("P");
@@ -129,21 +127,53 @@ function getJsonData(){
         p.appendChild(t).className = "ca-main";
         div.appendChild(p).className = "ca-content";
         ahref.appendChild(div);
+        li.onclick = function () { window.open("navegador.html?var=" + categoria['enlace']); };
+        li.appendChild(ahref);*/
+        
+        /*if(categoria['subcategoria'].length > 0){
+            var subCategorias = categoria['subcategoria'];
+            ahref.href = "subcategorias.html?valor=" + i;
+        }else{
+            ahref.href = categoria['enlace'];
+        }*/
+        
         
         if(categoria['subcategoria'].length > 0){
             var subCategorias = categoria['subcategoria'];
-            ahref.href = "subcategorias.html?valor=" + i;
+            var li = document.createElement("LI");
+            var ahref = document.createElement("A");
+            var div = document.createElement("DIV");
+            var p = document.createElement("P");
+            var t = document.createTextNode(categoria['nombre']);
             
-            /*for(var j = 0; j < subCategorias.length; j++){
-                var subCategoria = subCategorias[j];
-            }*/
+            p.appendChild(t).className = "ca-main";
+            div.appendChild(p).className = "ca-content";
+            ahref.appendChild(div);
+            ahref.href = "subcategorias.html?valor=" + i;
+            li.appendChild(ahref);
+            document.getElementById("lista").appendChild(li);
         }else{
-            ahref.href = categoria['enlace'];
+            pintarOpciones(categoria['nombre'], categoria['enlace']);
         }
         
-        li.appendChild(ahref);
-        document.getElementById("lista").appendChild(li);
+//        document.getElementById("lista").appendChild(li);
+        
     }    
+}
+
+function pintarOpciones(texto, enlace) {
+    var li = document.createElement("LI");
+    var ahref = document.createElement("A");
+    var div = document.createElement("DIV");
+    var p = document.createElement("P");
+    var t = document.createTextNode(texto);
+    
+    p.appendChild(t).className = "ca-main";
+    div.appendChild(p).className = "ca-content";
+    ahref.appendChild(div);
+    li.appendChild(ahref);
+    li.onclick = function () { window.open("navegador.html?var=" + enlace); };
+    document.getElementById("lista").appendChild(li);
 }
 
 function gotFS(fileSystem) {
@@ -163,19 +193,17 @@ function gotFileWriter(writer) {
         console.log("Fichero creado correctamente");
     };
     
-    //writer.write(json);
+    //writer.write(json);  Cuidao!! Así en iOS no vaaaa
     writer.write(JSON.stringify(json));
     writer.abort();
 }
 
 function success(parent){
     console.log("Directorio creado: " + parent.name)
-    alert('Fichero creado success');
 }
 
 function fail(error) {
     console.log("error en txt o directorio: " + error.code);
-    alert('Error en Fichero');
 }
 
 function cargarPaginaOpciones() {

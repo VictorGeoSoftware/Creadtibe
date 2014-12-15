@@ -14,4 +14,5 @@
      
     <preference name="SplashScreen" value="mayo_splash" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="Fullscreen" value="true" />
 </widget>

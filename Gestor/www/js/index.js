@@ -118,7 +118,7 @@ function getJsonData(){
         var categoria = categorias[i];
         
         //Añadimos filas de ListView en página principal
-        var li = document.createElement("LI");
+/*        var li = document.createElement("LI");
         var ahref = document.createElement("A");
         var div = document.createElement("DIV");
         var p = document.createElement("P");
@@ -127,17 +127,53 @@ function getJsonData(){
         p.appendChild(t).className = "ca-main";
         div.appendChild(p).className = "ca-content";
         ahref.appendChild(div);
+        li.onclick = function () { window.open("navegador.html?var=" + categoria['enlace']); };
+        li.appendChild(ahref);*/
         
-        if(categoria['subcategoria'].length > 0){
+        /*if(categoria['subcategoria'].length > 0){
             var subCategorias = categoria['subcategoria'];
             ahref.href = "subcategorias.html?valor=" + i;
         }else{
             ahref.href = categoria['enlace'];
+        }*/
+        
+        
+        if(categoria['subcategoria'].length > 0){
+            var subCategorias = categoria['subcategoria'];
+            var li = document.createElement("LI");
+            var ahref = document.createElement("A");
+            var div = document.createElement("DIV");
+            var p = document.createElement("P");
+            var t = document.createTextNode(categoria['nombre']);
+            
+            p.appendChild(t).className = "ca-main";
+            div.appendChild(p).className = "ca-content";
+            ahref.appendChild(div);
+            ahref.href = "subcategorias.html?valor=" + i;
+            li.appendChild(ahref);
+            document.getElementById("lista").appendChild(li);
+        }else{
+            pintarOpciones(categoria['nombre'], categoria['enlace']);
         }
         
-        li.appendChild(ahref);
-        document.getElementById("lista").appendChild(li);
+//        document.getElementById("lista").appendChild(li);
+        
     }    
+}
+
+function pintarOpciones(texto, enlace) {
+    var li = document.createElement("LI");
+    var ahref = document.createElement("A");
+    var div = document.createElement("DIV");
+    var p = document.createElement("P");
+    var t = document.createTextNode(texto);
+    
+    p.appendChild(t).className = "ca-main";
+    div.appendChild(p).className = "ca-content";
+    ahref.appendChild(div);
+    li.appendChild(ahref);
+    li.onclick = function () { window.open("navegador.html?var=" + enlace); };
+    document.getElementById("lista").appendChild(li);
 }
 
 function gotFS(fileSystem) {

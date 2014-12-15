@@ -40,10 +40,12 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/index.html \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/navegador.html \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/opciones.html \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/subcategorias.html \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/index.css \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/navegador.css \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/opciones.css \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/css/subcategorias.css \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/back.png \
@@ -53,7 +55,9 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/logo.png \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/mayo_splash.jpg \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/next.png \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/img/settings.png \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/index.js \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/navegador.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/opciones.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/subcategorias.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file \

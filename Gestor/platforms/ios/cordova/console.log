@@ -456,3 +456,28 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2014-12-12 14:52:52.291 GestorContenidos[10942:1108243] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/2A8B1B44-0182-4C14-B9C0-621AE2D2DE98/GestorContenidos.app/www/opciones.html
 2014-12-12 14:53:01.590 GestorContenidos[10942:1108243] Resetting plugins due to page load.
 2014-12-12 14:53:03.318 GestorContenidos[10942:1108243] Finished load of: http://www.mayoclinic.org/about-mayo-clinic/notice-of-privacy-practices
+2014-12-12 14:58:04.390 GestorContenidos[11128:1116296] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-12 14:58:04.391 GestorContenidos[11128:1116296] Multi-tasking -> Device: YES, App: YES
+2014-12-12 14:58:04.392 GestorContenidos[11128:1116296] Unlimited access to network resources
+2014-12-12 14:58:04.395 GestorContenidos[11128:1116296] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-12 14:58:04.738 GestorContenidos[11128:1116296] [CDVTimer][splashscreen] 69.709003ms
+2014-12-12 14:58:04.742 GestorContenidos[11128:1116296] [CDVTimer][file] 3.268003ms
+2014-12-12 14:58:04.742 GestorContenidos[11128:1116296] [CDVTimer][TotalPluginStartup] 73.422015ms
+2014-12-12 14:58:04.873 GestorContenidos[11128:1116296] Resetting plugins due to page load.
+2014-12-12 14:58:04.955 GestorContenidos[11128:1116296] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/0B61DF50-85CB-4DC1-BBE4-86803DE5BF21/GestorContenidos.app/www/index.html
+2014-12-12 15:07:17.687 GestorContenidos[11128:1116296] Resetting plugins due to page load.
+2014-12-12 15:07:17.724 GestorContenidos[11128:1116296] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/0B61DF50-85CB-4DC1-BBE4-86803DE5BF21/GestorContenidos.app/www/subcategorias.html?valor=1
+2014-12-12 15:07:19.440 GestorContenidos[11128:1116296] Resetting plugins due to page load.
+2014-12-12 15:07:19.458 GestorContenidos[11128:1116296] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/0B61DF50-85CB-4DC1-BBE4-86803DE5BF21/GestorContenidos.app/www/index.html
+2014-12-12 15:07:21.578 GestorContenidos[11128:1116296] Resetting plugins due to page load.
+2014-12-12 15:07:21.599 GestorContenidos[11128:1116296] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/0B61DF50-85CB-4DC1-BBE4-86803DE5BF21/GestorContenidos.app/www/opciones.html
+2014-12-12 15:07:23.724 GestorContenidos[11128:1116296] Resetting plugins due to page load.
+2014-12-12 15:07:25.647 GestorContenidos[11128:1116296] Finished load of: http://www.mayoclinic.org/about-mayo-clinic/notice-of-privacy-practices
+2014-12-12 15:07:28.802 GestorContenidos[11128:1118371] Terminating since there is no system app.
