@@ -10,7 +10,8 @@ var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg",
                             ], "enlace": ""},
                           {"nombre": "Opciones académicas", "subcategoria": "", "enlace": "http://www.mayo.edu/education/?_ga=1.224352156.667299883.1416995256"},
                           {"nombre": "Para profesionales de la medicina", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/medical-professionals"},
-                          {"nombre": "Productos y servicios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"}
+                          {"nombre": "Productos y servicios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"},
+                          {"nombre": "Última fila de prueba", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"}
                          ], 
             "configuracion":[{"nombre": "Terminos y condiciones", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/about-this-site/terms-conditions-use-policy"},
                              {"nombre": "", "subcategoria": [
@@ -70,12 +71,9 @@ var app = {
             });
         });
         
-        
         //Se guarda el JSON en un txt.
         //De esta manera, cacheamos estructura y compartimos información entre diferentes vistas.
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
-        
-        
     }
 };
 
@@ -118,26 +116,39 @@ function getJsonData(){
         var categoria = categorias[i];
         
         //Añadimos filas de ListView en página principal
-        var li = document.createElement("LI");
-        var ahref = document.createElement("A");
-        var div = document.createElement("DIV");
-        var p = document.createElement("P");
-        var t = document.createTextNode(categoria['nombre']);
-        
-        p.appendChild(t).className = "ca-main";
-        div.appendChild(p).className = "ca-content";
-        ahref.appendChild(div);
-        
         if(categoria['subcategoria'].length > 0){
             var subCategorias = categoria['subcategoria'];
+            var li = document.createElement("LI");
+            var ahref = document.createElement("A");
+            var div = document.createElement("DIV");
+            var p = document.createElement("P");
+            var t = document.createTextNode(categoria['nombre']);
+            
+            p.appendChild(t).className = "ca-main";
+            div.appendChild(p).className = "ca-content";
+            ahref.appendChild(div);
             ahref.href = "subcategorias.html?valor=" + i;
+            li.appendChild(ahref);
+            document.getElementById("lista").appendChild(li);
         }else{
-            ahref.href = categoria['enlace'];
+            pintarOpciones(categoria['nombre'], categoria['enlace']);
         }
-        
-        li.appendChild(ahref);
-        document.getElementById("lista").appendChild(li);
-    }    
+    }
+}
+
+function pintarOpciones(texto, enlace) {
+    var li = document.createElement("LI");
+    var ahref = document.createElement("A");
+    var div = document.createElement("DIV");
+    var p = document.createElement("P");
+    var t = document.createTextNode(texto);
+    
+    p.appendChild(t).className = "ca-main";
+    div.appendChild(p).className = "ca-content";
+    ahref.appendChild(div);
+    li.appendChild(ahref);
+    li.onclick = function () { window.open("navegador.html?var=" + enlace); };
+    document.getElementById("lista").appendChild(li);
 }
 
 function gotFS(fileSystem) {
@@ -171,7 +182,6 @@ function fail(error) {
 }
 
 function cargarPaginaOpciones() {
-//    window.location = ("opciones.html");
     window.open("opciones.html", "_blank",  "location=yes");
 }
 

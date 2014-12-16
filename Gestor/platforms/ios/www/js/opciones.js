@@ -96,8 +96,9 @@ function cargarOpciones(){
                 p.appendChild(t).className = "ca-main";
                 div.appendChild(p).className = "ca-content";
                 ahref.appendChild(div);
-                ahref.href = subcategoria_nombre['enlace'];
+//                ahref.href = subcategoria_nombre['enlace'];
                 li.appendChild(ahref);
+                li.onclick = function () { window.open("navegador.html?var=" + subcategoria_nombre['enlace']); };
                 
                 if(j < opcion_subcategorias.length - 1){
                     li.style.marginBottom = "0px";
@@ -121,8 +122,9 @@ function pintarOpciones(texto, enlace) {
     p.appendChild(t).className = "ca-main";
     div.appendChild(p).className = "ca-content";
     ahref.appendChild(div);
-    ahref.href = enlace;
+//    ahref.href = enlace;
     li.appendChild(ahref);
+    li.onclick = function () { window.open("navegador.html?var=" + enlace); };
     document.getElementById("lista").appendChild(li);
 }
 

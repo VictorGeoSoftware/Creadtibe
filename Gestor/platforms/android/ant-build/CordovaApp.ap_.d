@@ -61,6 +61,7 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/opciones.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/subcategorias.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android \
@@ -85,6 +86,9 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android/FileSystem.js \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/AndroidManifest.xml \

@@ -1,3 +1,12 @@
+body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:18px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
 /*-----------------------------Estilos barra menu inferior*/
 .ca-inferior{
     position: fixed;
@@ -6,6 +15,8 @@
     z-index: 1;
     width: 100%;
     padding: 7px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ca-inferior li{
@@ -45,10 +56,11 @@
     position: relative;
     width: auto;
     height: auto;
+    top: 5px;
 }
 
 .ca-inferior-main{
-    font-size: 18px;
+    font-size: 15px;
     color: #000;
     opacity: 0.8;
     text-align: center;
@@ -63,26 +75,8 @@
     color: #afa379;
     font-size: 20px;
     opacity: 0.1;
-    animation: moveFromLeft 400ms ease;
 }
 
 .ca-inferior li:hover .ca-inferior-main{
     color: #afa379;
-    animation: moveFromRight 400ms ease;
-}
-
-@keyframes moveFromLeft{
-    from{
-        transform: translateX(-100%);
-    } to {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes moveFromRight{
-    from{
-        transform: translateX(100%);
-    } to {
-        transform: translateX(0%);
-    }
 }

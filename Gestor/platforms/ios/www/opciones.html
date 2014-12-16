@@ -22,10 +22,32 @@
             </li>
         </ul>
 
-        <p onclick="cerrar()">
-            <img src="img/back.png" style="margin-right: 10px;">
-            Atrás
-        </p>
+        <!-- Aqui va el barra de menú inferior -->
+        <ul id="menu_inferior" class="ca-inferior">
+            <li style="width: 30%">
+                <a href="javascript:history.go(-1)">
+                    <span class="ca-icon"><img src="img/back.png"></span>
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Atrás</h2>
+                    </div>
+                </a>
+            </li>
+            <li style="width: 30%">
+                <a href="index.html">
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Inicio</h2>
+                    </div>
+                </a>
+            </li>
+            <li style="width: 30%">
+                <a href="javascript:history.go(1)">
+                    <span class="ca-icon"><img src="img/next.png"></span>
+                    <div class="ca-inferior-content">
+                        <h2 class="ca-inferior-main">Adelante</h2>
+                    </div>
+                </a>
+            </li>
+        </ul>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/opciones.js"></script>
     </body>

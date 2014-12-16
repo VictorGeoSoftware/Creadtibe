@@ -1,6 +1,6 @@
 body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:20px;
+    font-size:18px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -11,7 +11,7 @@ body {
     position: fixed;
     z-index: 2;
     margin-left: 25px;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 .imagen {
@@ -34,11 +34,12 @@ h1 {
 
 /*------------------------------------ Estilos menu categorias*/
 .ca-menu{
-    position: relative;
+    position: absolute;
     top: 310px;
-    margin-bottom: 100px;
+    bottom: 60px;
+    overflow: scroll;
     padding: 0;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 100%;
 }
 
@@ -68,13 +69,13 @@ h1 {
 
 .ca-content{
     position: absolute;
-    left: 50px;
+    left: 10px;
     width: inherit;
     height: inherit;
 }
 
 .ca-main{
-    font-size: 20px;
+    font-size: 18px;
     transition: all linear;
 }
 
@@ -96,6 +97,8 @@ h1 {
     z-index: 1;
     width: 100%;
     padding: 7px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ca-inferior li{
@@ -135,10 +138,11 @@ h1 {
     position: relative;
     width: auto;
     height: auto;
+    top: 5px;
 }
 
 .ca-inferior-main{
-    font-size: 18px;
+    font-size: 15px;
     color: #000;
     opacity: 0.8;
     text-align: center;
@@ -153,26 +157,8 @@ h1 {
     color: #afa379;
     font-size: 20px;
     opacity: 0.1;
-    animation: moveFromLeft 400ms ease;
 }
 
 .ca-inferior li:hover .ca-inferior-main{
     color: #afa379;
-    animation: moveFromRight 400ms ease;
-}
-
-@keyframes moveFromLeft{
-    from{
-        transform: translateX(-100%);
-    } to {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes moveFromRight{
-    from{
-        transform: translateX(100%);
-    } to {
-        transform: translateX(0%);
-    }
 }

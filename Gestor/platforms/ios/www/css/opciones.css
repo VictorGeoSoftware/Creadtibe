@@ -1,6 +1,6 @@
 body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:20px;
+    font-size:18px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -64,4 +64,96 @@ body {
 .ca-menu li:active .ca-main{
     color: #FFFFFF;
     font-size: 15px;
+}
+
+/*-----------------------------Estilos barra menu inferior*/
+.ca-inferior{
+    position: fixed;
+    bottom: -20px;
+    background: #fafafa;
+    z-index: 1;
+    width: 100%;
+    padding: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ca-inferior li{
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    margin-right: 4px;
+    transition: all 300ms linear;
+}
+
+.ca-inferior li:last-child{
+    margin-right: 0px;
+}
+
+.ca-inferior li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    position: absolute;
+    text-decoration: none;
+}
+
+.ca-icon{
+    position: absolute;
+    float: left;
+    left: 0px;
+    top: 10px;
+    transition: all 200ms linear;
+}
+
+.ca-inferior-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 5px;
+}
+
+.ca-inferior-main{
+    font-size: 15px;
+    color: #000;
+    opacity: 0.8;
+    text-align: center;
+    transition: all 200ms linear;
+}
+
+.ca-inferior li:hover{
+    background: #fafafa;
+}
+
+.ca-inferior li:hover .ca-icon{
+    color: #afa379;
+    font-size: 20px;
+    opacity: 0.1;
+    animation: moveFromLeft 400ms ease;
+}
+
+.ca-inferior li:hover .ca-inferior-main{
+    color: #afa379;
+    animation: moveFromRight 400ms ease;
+}
+
+@keyframes moveFromLeft{
+    from{
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveFromRight{
+    from{
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0%);
+    }
 }

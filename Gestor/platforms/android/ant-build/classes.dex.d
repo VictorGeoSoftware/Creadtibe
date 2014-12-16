@@ -48,5 +48,7 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/file/LocalFilesystemURL.class \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/file/NoModificationAllowedException.class \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/file/TypeMismatchException.class \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager$1.class \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager.class \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen.class \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/ant-build/dexedLibs/classes-1b2ad8276166d6a6ff5cea5a88847f39.jar \

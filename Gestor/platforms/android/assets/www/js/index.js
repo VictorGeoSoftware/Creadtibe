@@ -10,7 +10,8 @@ var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg",
                             ], "enlace": ""},
                           {"nombre": "Opciones académicas", "subcategoria": "", "enlace": "http://www.mayo.edu/education/?_ga=1.224352156.667299883.1416995256"},
                           {"nombre": "Para profesionales de la medicina", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/medical-professionals"},
-                          {"nombre": "Productos y servicios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"}
+                          {"nombre": "Productos y servicios", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"},
+                          {"nombre": "Última fila de prueba", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/products-services"}
                          ], 
             "configuracion":[{"nombre": "Terminos y condiciones", "subcategoria": "",  "enlace": "http://www.mayoclinic.org/about-this-site/terms-conditions-use-policy"},
                              {"nombre": "", "subcategoria": [
@@ -34,23 +35,11 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('offline', this.onNoInternet, false);
+        document.addEventListener('online', this.onInternet, false);
     },
     onDeviceReady: function() {
         getJsonData();
-        
-        /*var reader = new FileReader();
-        var fileSource = "Gestor/datos_gestor.txt";
-        
-        console.log('Evaluando Existe el fichero');
-        reader.onloadend = function(evt){
-            if(evt.target.result == null){
-                console.log('NO Existe el fichero');
-                navigator.splashscreen.show();
-            }else{
-                console.log('SI Existe el fichero');
-            }
-        };
-        reader.readAsDataURL(fileSource);*/
 
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
             fs.root.getFile("Gestor/datos_gestor.txt", null, function(fe){
@@ -70,12 +59,15 @@ var app = {
             });
         });
         
-        
         //Se guarda el JSON en un txt.
         //De esta manera, cacheamos estructura y compartimos información entre diferentes vistas.
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
-        
-        
+    },
+    onNoInternet: function(){
+        alert('No hay Internet');
+    },
+    onInternet: function(){
+        alert('HAY Internet');
     }
 };
 
@@ -118,26 +110,6 @@ function getJsonData(){
         var categoria = categorias[i];
         
         //Añadimos filas de ListView en página principal
-/*        var li = document.createElement("LI");
-        var ahref = document.createElement("A");
-        var div = document.createElement("DIV");
-        var p = document.createElement("P");
-        var t = document.createTextNode(categoria['nombre']);
-        
-        p.appendChild(t).className = "ca-main";
-        div.appendChild(p).className = "ca-content";
-        ahref.appendChild(div);
-        li.onclick = function () { window.open("navegador.html?var=" + categoria['enlace']); };
-        li.appendChild(ahref);*/
-        
-        /*if(categoria['subcategoria'].length > 0){
-            var subCategorias = categoria['subcategoria'];
-            ahref.href = "subcategorias.html?valor=" + i;
-        }else{
-            ahref.href = categoria['enlace'];
-        }*/
-        
-        
         if(categoria['subcategoria'].length > 0){
             var subCategorias = categoria['subcategoria'];
             var li = document.createElement("LI");
@@ -155,10 +127,7 @@ function getJsonData(){
         }else{
             pintarOpciones(categoria['nombre'], categoria['enlace']);
         }
-        
-//        document.getElementById("lista").appendChild(li);
-        
-    }    
+    }
 }
 
 function pintarOpciones(texto, enlace) {
@@ -207,7 +176,6 @@ function fail(error) {
 }
 
 function cargarPaginaOpciones() {
-//    window.location = ("opciones.html");
     window.open("opciones.html", "_blank",  "location=yes");
 }
 
