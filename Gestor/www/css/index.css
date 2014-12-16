@@ -41,6 +41,7 @@ h1 {
     padding: 0;
     margin: 10px auto;
     width: 100%;
+    
 }
 
 .ca-menu li{
@@ -90,19 +91,26 @@ h1 {
 }
 
 /*-----------------------------Estilos barra menu inferior*/
-.ca-inferior{
+.contenedor-menu{
     position: fixed;
-    bottom: -20px;
+    align-content: center;
+    width: 100%;
+    height: 70px;
+    bottom: 0px;
     background: #fafafa;
     z-index: 1;
-    width: 100%;
-    padding: 7px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.ca-inferior{
+    position: relative;
+    background: #fafafa;
+    z-index: 1;
 }
 
 .ca-inferior li{
+    top: -10px;
     height: 50px;
+    width: 30%;
     overflow: hidden;
     position: relative;
     float: left;
