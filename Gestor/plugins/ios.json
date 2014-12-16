@@ -47,6 +47,10 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpinnerDialog\"><param name=\"ios-package\" value=\"CDVSpinnerDialog\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -61,6 +65,9 @@
             "PACKAGE_NAME": "com.creadtibe.movilidad.gestor"
         },
         "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.creadtibe.movilidad.gestor"
+        },
+        "hu.dpal.phonegap.plugins.SpinnerDialog": {
             "PACKAGE_NAME": "com.creadtibe.movilidad.gestor"
         }
     },

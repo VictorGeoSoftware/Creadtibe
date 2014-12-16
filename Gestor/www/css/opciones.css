@@ -8,16 +8,24 @@ body {
 }
 
 .titulo{
-    text-align: center;
     margin-top: 10px;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
 }
 
 
-/*Estilos menu categorias*/
+/*--------------------------------- Estilos menu categorias*/
 .ca-menu{
+    position: absolute;
     padding: 0;
     margin: 20px auto;
     width: 100%;
+    top: 50px;
+    bottom: 60px;
+    overflow: auto;
 }
 
 .ca-menu li{
@@ -46,7 +54,7 @@ body {
 
 .ca-content{
     position: absolute;
-    left: 50px;
+    left: 10px;
     width: inherit;
     height: inherit;
 }

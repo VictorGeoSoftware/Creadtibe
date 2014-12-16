@@ -51,6 +51,8 @@ function cargarOpciones(json){
     var opcion_recibida = getSubcategoria();
     var categorias = json['categorias']; //Guardo a capón el array
     var categoria_seleccionada = categorias[opcion_recibida];
+    var nombreCategoria = categoria_seleccionada['nombre'];
+    document.getElementById("titulo").innerHTML = nombreCategoria;
     var subcategorias = categoria_seleccionada['subcategoria'];
     
     for(var i = 0; i < subcategorias.length; i++){

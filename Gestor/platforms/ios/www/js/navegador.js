@@ -19,8 +19,10 @@ var app = {
         var url_recibida = location.search.substr(1, location.search.length);
         var aux = url_recibida.split("=");
         var enlace = aux[1];
-        console.log("url_recibida: " + enlace);
+        
+        navigator.notification.activityStart("Cargando página", "Un momento, por favor...");
         window.open(enlace, "iframe");
+        navigator.notification.activityStop();
     }
 };
 

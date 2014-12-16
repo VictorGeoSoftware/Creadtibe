@@ -167,6 +167,13 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "file": "plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js",
+        "id": "hu.dpal.phonegap.plugins.SpinnerDialog.SpinnerDialog",
+        "merges": [
+            "window.plugins.spinnerDialog"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -174,7 +181,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.splashscreen": "0.3.5",
     "org.apache.cordova.file": "1.3.2",
-    "org.apache.cordova.network-information": "0.2.14"
+    "org.apache.cordova.network-information": "0.2.14",
+    "hu.dpal.phonegap.plugins.SpinnerDialog": "1.3.0"
 }
 // BOTTOM OF METADATA
 });

@@ -19,8 +19,11 @@ var app = {
         var url_recibida = location.search.substr(1, location.search.length);
         var aux = url_recibida.split("=");
         var enlace = aux[1];
-        console.log("url_recibida: " + enlace);
+        console.log('Enlace recibido: ' + enlace);
+        
+        window.plugins.spinnerDialog.show(null, 'Cargando...');
         window.open(enlace, "iframe");
+        document.getElementById("iframe").onload = function(){window.plugins.spinnerDialog.hide();};
     }
 };
 

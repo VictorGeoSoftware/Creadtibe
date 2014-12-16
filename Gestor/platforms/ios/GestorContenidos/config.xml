@@ -43,4 +43,7 @@
     <preference name="SplashScreen" value="mayo_splash" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="Fullscreen" value="true" />
+    <feature name="SpinnerDialog">
+        <param name="ios-package" value="CDVSpinnerDialog" />
+    </feature>
 </widget>

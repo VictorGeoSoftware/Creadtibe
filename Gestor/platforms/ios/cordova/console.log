@@ -844,3 +844,86 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2014-12-16 13:05:32.337 GestorContenidos[6194:573939] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/A4E0946C-D2FE-4E23-89ED-B4B55BBAE653/GestorContenidos.app/www/index.html
 2014-12-16 13:07:25.285 GestorContenidos[6194:573939] Resetting plugins due to page load.
 2014-12-16 13:07:25.394 GestorContenidos[6194:573939] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/A4E0946C-D2FE-4E23-89ED-B4B55BBAE653/GestorContenidos.app/www/opciones.html
+2014-12-16 13:24:39.205 GestorContenidos[6704:623731] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-16 13:24:39.206 GestorContenidos[6704:623731] Multi-tasking -> Device: YES, App: YES
+2014-12-16 13:24:39.222 GestorContenidos[6704:623731] Unlimited access to network resources
+2014-12-16 13:24:39.239 GestorContenidos[6704:623731] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-16 13:24:39.723 GestorContenidos[6704:623731] [CDVTimer][splashscreen] 166.482985ms
+2014-12-16 13:24:39.730 GestorContenidos[6704:623731] [CDVTimer][file] 7.221997ms
+2014-12-16 13:24:39.730 GestorContenidos[6704:623731] [CDVTimer][TotalPluginStartup] 174.084008ms
+2014-12-16 13:24:39.998 GestorContenidos[6704:623731] Resetting plugins due to page load.
+2014-12-16 13:24:40.153 GestorContenidos[6704:623731] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/D417E2AF-7EFE-4962-8F88-4E91ECE19991/GestorContenidos.app/www/index.html
+2014-12-16 13:24:42.112 GestorContenidos[6704:623731] THREAD WARNING: ['NetworkStatus'] took '1826.998047' ms. Plugin should use a background thread.
+2014-12-16 13:24:42.147 GestorContenidos[6704:623731] THREAD WARNING: ['File'] took '11.973145' ms. Plugin should use a background thread.
+2014-12-16 13:32:17.432 GestorContenidos[6895:652321] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-16 13:32:17.433 GestorContenidos[6895:652321] Multi-tasking -> Device: YES, App: YES
+2014-12-16 13:32:17.435 GestorContenidos[6895:652321] Unlimited access to network resources
+2014-12-16 13:32:17.449 GestorContenidos[6895:652321] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-16 13:32:17.841 GestorContenidos[6895:652321] [CDVTimer][splashscreen] 117.294014ms
+2014-12-16 13:32:17.844 GestorContenidos[6895:652321] [CDVTimer][file] 3.170967ms
+2014-12-16 13:32:17.845 GestorContenidos[6895:652321] [CDVTimer][TotalPluginStartup] 120.895028ms
+2014-12-16 13:32:17.960 GestorContenidos[6895:652321] Resetting plugins due to page load.
+2014-12-16 13:32:18.073 GestorContenidos[6895:652321] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/2A64CC58-2417-4133-8882-29CB7A666B8B/GestorContenidos.app/www/index.html
+2014-12-16 13:32:21.261 GestorContenidos[6895:652321] THREAD WARNING: ['NetworkStatus'] took '3089.349121' ms. Plugin should use a background thread.
+2014-12-16 14:22:51.280 GestorContenidos[7986:753150] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-16 14:22:51.295 GestorContenidos[7986:753150] Multi-tasking -> Device: YES, App: YES
+2014-12-16 14:22:51.345 GestorContenidos[7986:753150] Unlimited access to network resources
+2014-12-16 14:22:51.356 GestorContenidos[7986:753150] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-16 14:22:52.188 GestorContenidos[7986:753150] [CDVTimer][splashscreen] 341.853976ms
+2014-12-16 14:22:52.205 GestorContenidos[7986:753150] [CDVTimer][file] 17.471015ms
+2014-12-16 14:22:52.206 GestorContenidos[7986:753150] [CDVTimer][TotalPluginStartup] 359.818995ms
+2014-12-16 14:22:52.548 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:22:52.760 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/index.html
+2014-12-16 14:22:52.956 GestorContenidos[7986:753150] THREAD WARNING: ['File'] took '10.913086' ms. Plugin should use a background thread.
+2014-12-16 14:22:59.554 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:22:59.693 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/navegador.html?var=http://www.mayoclinic.org/products-services
+2014-12-16 14:23:04.070 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:23:04.092 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/index.html
+2014-12-16 14:23:11.930 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:23:11.961 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/navegador.html?var=http://www.mayoclinic.org
+2014-12-16 14:23:17.606 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:23:17.657 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/navegador.html?var=http://www.mayoclinic.org
+2014-12-16 14:23:20.248 GestorContenidos[7986:753150] Resetting plugins due to page load.
+2014-12-16 14:23:20.278 GestorContenidos[7986:753150] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/CFF3FBC4-EE74-45F9-A8EA-471A61DE3A4C/GestorContenidos.app/www/index.html
+2014-12-16 14:25:47.291 GestorContenidos[7986:765565] Terminating since there is no system app.
+2014-12-16 14:29:16.393 GestorContenidos[8155:768220] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-16 14:29:16.394 GestorContenidos[8155:768220] Multi-tasking -> Device: YES, App: YES
+2014-12-16 14:29:16.414 GestorContenidos[8155:768220] Unlimited access to network resources
+2014-12-16 14:29:16.425 GestorContenidos[8155:768220] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-16 14:29:16.780 GestorContenidos[8155:768220] [CDVTimer][splashscreen] 47.680020ms
+2014-12-16 14:29:16.783 GestorContenidos[8155:768220] [CDVTimer][file] 2.997994ms
+2014-12-16 14:29:16.784 GestorContenidos[8155:768220] [CDVTimer][TotalPluginStartup] 51.057994ms
+2014-12-16 14:29:16.937 GestorContenidos[8155:768220] Resetting plugins due to page load.
+2014-12-16 14:29:17.070 GestorContenidos[8155:768220] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/87B00D9B-31B5-4A1F-BB90-8C2859C4D0A0/GestorContenidos.app/www/index.html
+2014-12-16 14:29:19.044 GestorContenidos[8155:768220] Resetting plugins due to page load.
+2014-12-16 14:29:19.098 GestorContenidos[8155:768220] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/87B00D9B-31B5-4A1F-BB90-8C2859C4D0A0/GestorContenidos.app/www/navegador.html?var=http://www.mayoclinic.org
+2014-12-16 14:29:48.554 GestorContenidos[8155:768220] Resetting plugins due to page load.
+2014-12-16 14:29:48.583 GestorContenidos[8155:768220] Finished load of: file:///Users/victor/Library/Developer/CoreSimulator/Devices/2515B339-37D3-484F-907E-E85C6C54A26E/data/Containers/Bundle/Application/87B00D9B-31B5-4A1F-BB90-8C2859C4D0A0/GestorContenidos.app/www/index.html

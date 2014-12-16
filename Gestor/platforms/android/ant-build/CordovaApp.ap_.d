@@ -60,9 +60,12 @@
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/navegador.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/opciones.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/js/subcategorias.js \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www \
+/Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/hu.dpal.phonegap.plugins.SpinnerDialog/www/spinner.js \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android \
 /Users/victor/Documents/Creadtibe/Gestor/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js \

@@ -37,7 +37,7 @@ h1 {
     position: absolute;
     top: 310px;
     bottom: 60px;
-    overflow: scroll;
+    overflow: auto;
     padding: 0;
     margin: 10px auto;
     width: 100%;

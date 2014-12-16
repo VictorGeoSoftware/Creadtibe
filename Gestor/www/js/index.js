@@ -1,5 +1,6 @@
 // ----- VARIABLES GLOBALES
 var configuracion_opciones;
+var hayInternet;
 
 //Se harcodea JSON, hasta que haya uno para leer
 var json = {"logo":"img/logo.png", "imagen": "img/image_index.jpg", 
@@ -34,41 +35,46 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        document.addEventListener('offline', onNoInternet, false);
+        document.addEventListener('online', onInternet, false);
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener('offline', this.onNoInternet, false);
-        document.addEventListener('online', this.onInternet, false);
     },
     onDeviceReady: function() {
-        getJsonData();
-
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
             fs.root.getFile("Gestor/datos_gestor.txt", null, function(fe){
                 fe.file(function(f){
                     var reader = new FileReader();
                     reader.onloadend = function(evt){
-                        
-                        if(evt.target.result == null){
+                        if(evt.target.result == null){ //NO EXISTE DOCUMENTO
                             console.log('NO Existe el fichero');
                             navigator.splashscreen.show();
-                        }else{
+                            if(hayInternet == 'true'){
+                               getJsonData();
+
+        //Se guarda el JSON en un txt.
+        //De esta manera, cacheamos estructura y compartimos información entre diferentes vistas.
+                                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+                            }else{
+                                alert('Para iniciar la aplicación por primera vez, se requiere que el dispositivo esté conectado a internet');
+                            }
+                        }else{ //EXISTE DOCUMENTO
                             console.log('SI Existe el fichero');
+                            if(hayInternet == 'true'){
+                               getJsonData();
+
+                                //Se guarda el JSON en un txt.
+                                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+                            }else{
+                                alert('No hay conexión a internet. No se podrá acceder a los contenidos de la aplicación');
+                            }
                         }
                     }
+                    
                     reader.readAsText(f);
                 })
             });
         });
-        
-        //Se guarda el JSON en un txt.
-        //De esta manera, cacheamos estructura y compartimos información entre diferentes vistas.
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
     },
-    onNoInternet: function(){
-        alert('No hay Internet');
-    },
-    onInternet: function(){
-        alert('HAY Internet');
-    }
 };
 
 app.initialize();
@@ -76,6 +82,14 @@ app.initialize();
 
 
 // ----- METODOS
+
+function onNoInternet() {
+    hayInternet = 'false';
+}
+
+function onInternet() {
+    hayInternet = 'true';
+}
 
 function getJsonData(){
     //Se usa el json hacordeado

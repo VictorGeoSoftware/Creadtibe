@@ -11,6 +11,9 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
+    <feature name="SpinnerDialog">
+        <param name="android-package" value="hu.dpal.phonegap.plugins.SpinnerDialog" />
+    </feature>
     <name>GestorContenidos</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
